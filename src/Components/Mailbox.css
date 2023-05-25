@@ -1,0 +1,36 @@
+.mailbox-container {
+  margin: 20px;
+}
+
+.editor-container {
+  height: 300px; /* Set a specific height for the Editor box */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.editor-wrapper {
+  border: none;
+  box-shadow: none;
+}
+
+.editor-content {
+  height: 100%;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  border: none;
+  outline: none;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+button {
+  margin-top: 10px;
+}

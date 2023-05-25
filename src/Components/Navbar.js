@@ -32,8 +32,8 @@ const MyNavbar = () => {
         style={{ display: "flex", justifyContent: "space-between" }}
       >
         <Nav className="mr-auto">
-          <Nav.Link as={Link} to="/about">
-            About
+          <Nav.Link as={Link} to="/sent-mails">
+            Sent Mails
           </Nav.Link>
           <Nav.Link as={Link} to="/contact">
             Contact
