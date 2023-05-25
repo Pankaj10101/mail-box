@@ -1,25 +1,29 @@
 import React from "react";
 import { Navbar, Nav, Button } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { setLoginStatus } from "../store/AuthSlice";
+import { toast } from "react-toastify";
 
 
 
 const MyNavbar = () => {
+  const dispatch = useDispatch()
   const navigate = useNavigate();
-  const isLogin = false
+  const isLogin = useSelector(state=>state.auth.isLogin)
 
   const onLogout = async () => {
-    // localStorage.removeItem("loginId");
-    // dispatch(setLoginStatus(false));
-    // localStorage.removeItem("userName");
-    // toast.success('LogOut Successfull')
-    // navigate("/sign-in");
+    localStorage.removeItem("loginId");
+    dispatch(setLoginStatus(false));
+    localStorage.removeItem("userName");
+    toast.success('LogOut Successfull')
+    navigate("/sign-in");
   };
 
   return (
     <Navbar bg="light" expand="lg">
       <Link to="/" className="text-decoration-none">
-        <Navbar.Brand className="ms-5 ">Expense Tracker</Navbar.Brand>
+        <Navbar.Brand className="ms-5 ">Mail Box</Navbar.Brand>
       </Link>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse
